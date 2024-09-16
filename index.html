@@ -26,7 +26,7 @@
   </head>
   <body>
     <div class="app">
-        <!---Base div and icon to open modal-->
+      <!---Base div and icon to open modal-->
       <h1 class="text-center mb-3 fw-bolder">TODO'S</h1>
       <div id="addnew" data-bs-toggle="modal" data-bs-target="#form">
         <span class="fw-bolder">Add New TODO</span>
@@ -36,11 +36,60 @@
         ></i>
       </div>
 
-    <!-- Modal to change into the form and modal opening logic -->
-     <!-- Adding the required fields for forms -->
+      <!-- Modal to change into the form and modal opening logic -->
+      <form
+        class="modal fade"
+        id="form"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title fs-5" id="exampleModalLabel">
+                Add a New TODO
+              </h2>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <!-- Adding the required fields for forms -->
 
+              <p>TODO Title</p>
+              <input type="text" class="form-control" id="textInput" />
+              <div id="msg"></div>
+              <br />
+              <p>Deadline</p>
+              <input type="date" id="dateInput" class="form-control" />
+              <br />
+              <p>Task</p>
+              <textarea id="textarea" cols="30" rows="5"></textarea>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-danger"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="button" id="add" class="btn btn-warning">
+                Add
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+      <!-- Displaying the created todo and tasks with edit and delete button in dom -->
+      <h4 class="text-center my-3 fw-bolder">My TODO'S</h4>
+      <div id="tasks"></div>
     </div>
-
+     <script src="script.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
