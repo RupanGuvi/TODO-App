@@ -29,11 +29,8 @@
       <!---Base div and icon to open modal-->
       <h1 class="text-center mb-3 fw-bolder">TODO'S</h1>
       <div id="addnew" data-bs-toggle="modal" data-bs-target="#form">
-        <span class="fw-bolder">Add New TODO</span>
-        <i
-          class="fa-solid fa-square-plus fa-beat fa-2xl"
-          style="color: #ffd43b"
-        ></i>
+        <span class="fw-bolder textstyle">Add New TODO</span>
+        <i class="fa-solid fa-square-plus fa-beat fa-xl" style="color: #FFD43B;"></i>
       </div>
 
       <!-- Modal to change into the form and modal opening logic -->
@@ -68,7 +65,7 @@
               <input type="date" id="dateInput" class="form-control" />
               <br />
               <p>Task</p>
-              <textarea id="textarea" cols="30" rows="5"></textarea>
+              <textarea id="textarea" cols="30" class="form-control" rows="5"></textarea>
             </div>
             <div class="modal-footer">
               <button
@@ -86,7 +83,7 @@
         </div>
       </form>
       <!-- Displaying the created todo and tasks with edit and delete button in dom -->
-      <h4 class="text-center my-3 fw-bolder">My TODO'S</h4>
+      <h3 class="text-center my-3 fw-bolder">My TODO'S</h3>
       <div id="tasks"></div>
     </div>
      <script src="script.js"></script>
