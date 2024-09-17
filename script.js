@@ -1,4 +1,4 @@
-//! Getting all the html elements
+// Getting all the html elements
 const form = document.getElementById("form");
 const textInput = document.getElementById("textInput");
 const dateInput = document.getElementById("dateInput");
@@ -7,7 +7,7 @@ const msg = document.getElementById("msg");
 const tasks = document.getElementById("tasks");
 const add = document.getElementById("add");
 
-//! Form validation part
+// Form validation part
 const formValidation = () => {
   if (
     textInput.value === "" ||
@@ -28,14 +28,14 @@ const formValidation = () => {
   }
 };
 
-//! submit logic
+// submit logic
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   formValidation();
 });
 
-//! getting details from the form input and storing it in data in array of objects.
+// getting details from the form input and storing it in data in array of objects.
 
 let data = [{}];
 
@@ -51,7 +51,7 @@ const getData = () => {
   createTask();
 };
 
-//! create function used to get the data and display in the my tasks
+// create function used to get the data and display in the my tasks
 
 const createTask = () => {
   tasks.innerHTML = "";
@@ -71,7 +71,7 @@ const createTask = () => {
   resetForm();
 };
 
-//! resetting the form after displaying the task
+// resetting the form after displaying the task
 
 const resetForm =() =>{
         textInput.value = "";
